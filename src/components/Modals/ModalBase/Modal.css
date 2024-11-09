@@ -1,0 +1,47 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.modal-content {
+  @apply bg-gray-def overflow-hidden;
+  padding: 30px;
+  border-radius: 8px;
+  max-height: 620px;
+  min-height: 400px;
+  min-width: 320px;
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+}
+
+.modal-close {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  font-weight: 800;
+  line-height: 30px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+}
